@@ -1,0 +1,27 @@
+{
+  "author": "Kenji Saito <k.saito.1985@gmail.com> (http://kenji-special.info)",
+  "name": "ks-vector",
+  "description": "ks-vector",
+  "version": "0.0.1",
+  "homepage": "https://github.com/kenjiSpecial/ks-vector",
+  "repository": {
+    "url": "https://github.com/kenjiSpecial/ks-vector"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "beefy --open ../lib/example.js:example.js --cwd ./examples -- -r ./lib/example.js:example",
+    "test": "tap ./test/*.js"
+  },
+  "devDependencies": {
+    "beefy": "~0.4.1",
+    "browserify": "~2.26.0",
+    "tap": "~0.3.1"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "tape": "^3.4.0"
+  }
+}
