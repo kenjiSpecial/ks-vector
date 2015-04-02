@@ -1,44 +1,43 @@
 var test = require('tape').test;
-var Vector = require('../lib/index');
+var Vector2 = require('../lib/index').Vector2;
 
-test('equivalence', function(t) {
-    var vec = new Vector.Vector2([1, 1, 1]);
 
-    t.equal(vec.elements[0], 1, 'these two numbers are equal');
-    t.end();
+test('equivalence00', function(t) {
+  var vec = new Vector2();
+
+  t.equal(vec.x, 0, 'x property of the vector is 0');
+  t.equal(vec.y, 0, 'y property of the vector is 0');
+  t.end();
 });
 
-test('copy', function(t){
-    var vec = new Vector.Vector2([1, 1, 1]);
-    var vecCopy = vec.copy(vec.elements);
+test('equivalence01', function(t) {
+  var vec = new Vector2( 10, 20 );
 
-    t.equal(vecCopy.elements[0], 1, 'these two numbers are equal');
-    t.end();
+  t.equal(vec.x, 10, 'x property of the vector is 10');
+  t.equal(vec.y, 20, 'y property of the vector is 20');
+  t.end();
 });
 
-test("subtract", function(t){
-    var vec1 = new Vector.Vector2([2, 2, 2]);
-    var vec2 = new Vector.Vector2([1, 1, 1]);
-    vec1.subtract(vec2);
+test('copy', function(t) {
+  var vec = new Vector2(10, 20);
+  var copiedVec = vec.copy();
 
-    t.equal(vec1.elements[0], 1, 'these two numbers are equal');
-    t.end();
-
+  t.equal(copiedVec.x, 10, 'x property of the copied vector is 10');
+  t.equal(copiedVec.y, 20, 'x property of the copied vector is 20');
+  t.end();
 });
 
-test('multiply', function(t){
-    var vec = new Vector.Vector2([2, 2]);
-    vec.multiply(10);
+test('set method', function(t){
+  var vec = new Vector2();
+  vec.set(10, 20);
 
-    t.equal(vec.elements[0], 20, 'these two numbers are equal');
-    t.end();
-});
+  t.equal(vec.x, 10, 'x property of the vector is 10');
+  t.equal(vec.y, 20, 'y property of the vector is 20');
 
-test('calculatrion', function(t){
-    var vec = new Vector.Vector2([2, 2]);
-    var vec1 = new Vector.Vector2([1, 1]);
-    vec.multiply(2).subtract(vec1);
+  vec.set(3, 12);
 
-    t.equal(vec.elements[0], 3, 'these two numbers are equal');
-    t.end();
+  t.equal(vec.x, 3, 'x property of the vector is 3');
+  t.equal(vec.y, 12, 'y property of the vector is 12');
+
+  t.end();
 });
