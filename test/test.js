@@ -26,9 +26,9 @@ test("subtract", function(t){
 
 });
 
-test('multiple', function(t){
+test('multiply', function(t){
     var vec = new Vector.Vector2([2, 2]);
-    vec.multiple(10);
+    vec.multiply(10);
 
     t.equal(vec.elements[0], 20, 'these two numbers are equal');
     t.end();
@@ -37,7 +37,7 @@ test('multiple', function(t){
 test('calculatrion', function(t){
     var vec = new Vector.Vector2([2, 2]);
     var vec1 = new Vector.Vector2([1, 1]);
-    vec.multiple(2).subtract(vec1);
+    vec.multiply(2).subtract(vec1);
 
     t.equal(vec.elements[0], 3, 'these two numbers are equal');
     t.end();
