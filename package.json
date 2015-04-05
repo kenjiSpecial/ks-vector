@@ -2,7 +2,7 @@
   "author": "Kenji Saito <k.saito.1985@gmail.com> (http://kenji-special.info)",
   "name": "ks-vector",
   "description": "A Javascript 2D Vector Math Library for sketch programing. In the future, I add 3D Vector Math Library",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/kenjiSpecial/ks-vector",
   "repository": {
     "url": "https://github.com/kenjiSpecial/ks-vector"
